@@ -1,0 +1,818 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+    
+    
+      
+        <title>pipen.plugin - pipen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.19190aaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.24b84193.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pipenplugin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="pipen" class="md-header-nav__button md-logo" aria-label="pipen">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            pipen
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              pipen.plugin
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="pipen" class="md-nav__button md-logo" aria-label="pipen">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    pipen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../CHANGELOG/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      pipen
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="pipen" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        pipen
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen/" class="md-nav__link">
+      pipen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.template/" class="md-nav__link">
+      pipen.template
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.scheduler/" class="md-nav__link">
+      pipen.scheduler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.proc/" class="md-nav__link">
+      pipen.proc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.plugin/" class="md-nav__link">
+      pipen.plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.defaults/" class="md-nav__link">
+      pipen.defaults
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.cli/" class="md-nav__link">
+      pipen.cli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.pipen/" class="md-nav__link">
+      pipen.pipen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.progressbar/" class="md-nav__link">
+      pipen.progressbar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.utils/" class="md-nav__link">
+      pipen.utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.exceptions/" class="md-nav__link">
+      pipen.exceptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.job/" class="md-nav__link">
+      pipen.job
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      pipen.channel
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="pipen.channel" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        pipen.channel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.channel/" class="md-nav__link">
+      pipen.channel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.channel.vector/" class="md-nav__link">
+      pipen.channel.vector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.channel.verbs/" class="md-nav__link">
+      pipen.channel.verbs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">pipen.</span><span class="mkapi-object-name">plugin</span>
+<span id="pipen.plugin"></span><a class="mkapi-docs-link" href="../../pipen.plugin">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Define hooks specifications and provide plugin manager&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">signal</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">xqute</span> <span class="kn">import</span> <span class="n">JobStatus</span><span class="p">,</span> <span class="n">Scheduler</span>
+<span class="kn">from</span> <span class="nn">xqute.utils</span> <span class="kn">import</span> <span class="n">a_read_text</span><span class="p">,</span> <span class="n">a_write_text</span>
+<span class="kn">from</span> <span class="nn">simplug</span> <span class="kn">import</span> <span class="n">Simplug</span><span class="p">,</span> <span class="n">SimplugResult</span>
+<span class="kn">from</span> <span class="nn">.defaults</span> <span class="kn">import</span> <span class="n">ProcOutputType</span>
+
+<span class="c1"># pylint: disable=unused-argument,invalid-name</span>
+<span class="n">plugin</span> <span class="o">=</span> <span class="n">Simplug</span><span class="p">(</span><span class="s1">&#39;pipen&#39;</span><span class="p">)</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_setup"></span><a class="mkapi-docs-link" title="pipen.plugin.on_setup" href="../../pipen.plugin/#pipen.plugin.on_setup">DOCS</a>
+<span class="k">def</span> <span class="nf">on_setup</span><span class="p">(</span><span class="n">plugin_config</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Setup for plugins, primarily used for the plugins to</span>
+<span class="sd">    setup some default configurations</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        plugin_config: The plugin configuration dictionary</span>
+<span class="sd">            One should define a configuration item either with a prefix as</span>
+<span class="sd">            the identity for the plugin or a namespace inside the plugin config.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_init"></span><a class="mkapi-docs-link" title="pipen.plugin.on_init" href="../../pipen.plugin/#pipen.plugin.on_init">DOCS</a>
+<span class="k">def</span> <span class="nf">on_init</span><span class="p">(</span><span class="n">pipen</span><span class="p">:</span> <span class="s2">&quot;Pipen&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;The the pipeline is initialized.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pipen: The Pipen object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_complete"></span><a class="mkapi-docs-link" title="pipen.plugin.on_complete" href="../../pipen.plugin/#pipen.plugin.on_complete">DOCS</a>
+<span class="k">def</span> <span class="nf">on_complete</span><span class="p">(</span><span class="n">pipen</span><span class="p">:</span> <span class="s2">&quot;Pipen&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The the pipeline is complete.</span>
+
+<span class="sd">    Note that this hook is only called when the pipeline</span>
+<span class="sd">    is successfully completed</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pipen: The Pipen object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_proc_init"></span><a class="mkapi-docs-link" title="pipen.plugin.on_proc_init" href="../../pipen.plugin/#pipen.plugin.on_proc_init">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_proc_init</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;When a process is initialized</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span class="p">(</span><span class="n">result</span><span class="o">=</span><span class="n">SimplugResult</span><span class="o">.</span><span class="n">FIRST</span><span class="p">)</span><span id="pipen.plugin.on_proc_shutdown"></span><a class="mkapi-docs-link" title="pipen.plugin.on_proc_shutdown" href="../../pipen.plugin/#pipen.plugin.on_proc_shutdown">DOCS</a>
+<span class="k">def</span> <span class="nf">on_proc_shutdown</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">signal</span><span class="o">.</span><span class="n">Signals</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;When pipeline is shutting down, by Ctrl-c for example.</span>
+
+<span class="sd">    Return False to stop shutting down, but you have to shut it down</span>
+<span class="sd">    by yourself, for example, `proc.xqute.task.cancel()`</span>
+
+<span class="sd">    Only the first return value will be used.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pipen: The xqute object</span>
+<span class="sd">        sig: The signal. `None` means a natural shutdown</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_proc_done"></span><a class="mkapi-docs-link" title="pipen.plugin.on_proc_done" href="../../pipen.plugin/#pipen.plugin.on_proc_done">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_proc_done</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;When a process is done</span>
+
+<span class="sd">    This hook will be called anyway when a proc is succeeded or failed.</span>
+<span class="sd">    To check if the process is succeeded, use `proc.succeeded`</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_job_init"></span><a class="mkapi-docs-link" title="pipen.plugin.on_job_init" href="../../pipen.plugin/#pipen.plugin.on_job_init">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_init</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;When a job is initialized</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">        job: The job</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_job_queued"></span><a class="mkapi-docs-link" title="pipen.plugin.on_job_queued" href="../../pipen.plugin/#pipen.plugin.on_job_queued">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_queued</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;When a job is queued in xqute. Note it might not be queued yet in</span>
+<span class="sd">    the scheduler system.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">        job: The job</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span class="p">(</span><span class="n">result</span><span class="o">=</span><span class="n">SimplugResult</span><span class="o">.</span><span class="n">FIRST</span><span class="p">)</span><span id="pipen.plugin.on_job_submitting"></span><a class="mkapi-docs-link" title="pipen.plugin.on_job_submitting" href="../../pipen.plugin/#pipen.plugin.on_job_submitting">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_submitting</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;When a job is submitting.</span>
+
+<span class="sd">    The first plugin (based on priority) have this hook return False will</span>
+<span class="sd">    cancel the submission</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">        job: The job</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        False to cancel submission</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_job_submitted"></span><a class="mkapi-docs-link" title="pipen.plugin.on_job_submitted" href="../../pipen.plugin/#pipen.plugin.on_job_submitted">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_submitted</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;When a job is submitted in the scheduler system.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">        job: The job</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_job_running"></span><a class="mkapi-docs-link" title="pipen.plugin.on_job_running" href="../../pipen.plugin/#pipen.plugin.on_job_running">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_running</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;When a job starts to run in scheduler system.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">        job: The job</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span class="p">(</span><span class="n">result</span><span class="o">=</span><span class="n">SimplugResult</span><span class="o">.</span><span class="n">FIRST</span><span class="p">)</span><span id="pipen.plugin.on_job_killing"></span><a class="mkapi-docs-link" title="pipen.plugin.on_job_killing" href="../../pipen.plugin/#pipen.plugin.on_job_killing">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_killing</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;When a job is being killed.</span>
+
+<span class="sd">    The first plugin (based on priority) have this hook return False will</span>
+<span class="sd">    cancel the killing</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">        job: The job</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        False to cancel killing</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_job_killed"></span><a class="mkapi-docs-link" title="pipen.plugin.on_job_killed" href="../../pipen.plugin/#pipen.plugin.on_job_killed">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_killed</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;When a job is killed</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">        job: The job</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_job_succeeded"></span><a class="mkapi-docs-link" title="pipen.plugin.on_job_succeeded" href="../../pipen.plugin/#pipen.plugin.on_job_succeeded">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_succeeded</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;When a job completes successfully.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">        job: The job</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="nd">@plugin</span><span class="o">.</span><span class="n">spec</span><span id="pipen.plugin.on_job_failed"></span><a class="mkapi-docs-link" title="pipen.plugin.on_job_failed" href="../../pipen.plugin/#pipen.plugin.on_job_failed">DOCS</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_failed</span><span class="p">(</span><span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;When a job is done but failed.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        proc: The process</span>
+<span class="sd">        job: The job</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="n">plugin</span><span class="o">.</span><span class="n">load_entrypoints</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">PipenMainPlugin</span><span class="p">:</span><span id="pipen.plugin.PipenMainPlugin"></span><a class="mkapi-docs-link" title="pipen.plugin.PipenMainPlugin" href="../../pipen.plugin/#pipen.plugin.PipenMainPlugin">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;The builtin main plugin, used to update the progress bar and</span>
+<span class="sd">    cache the job&quot;&quot;&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;main&#39;</span>
+
+    <span class="nd">@plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">def</span> <span class="nf">on_proc_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">signal</span><span class="o">.</span><span class="n">Signals</span><span class="p">]):</span>
+        <span class="sd">&quot;&quot;&quot;When a process is shutting down&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">sig</span><span class="p">:</span>
+            <span class="n">proc</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;warning&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Got signal </span><span class="si">%r</span><span class="s1">, trying a graceful shutdown ...&#39;</span><span class="p">,</span>
+                     <span class="n">sig</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="nd">@plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_submitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Update the progress bar when a job is submitted&quot;&quot;&quot;</span>
+        <span class="n">proc</span><span class="o">.</span><span class="n">pbar</span><span class="o">.</span><span class="n">update_job_submitted</span><span class="p">()</span>
+
+    <span class="nd">@plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_running</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Update the progress bar when a job starts to run&quot;&quot;&quot;</span>
+        <span class="n">proc</span><span class="o">.</span><span class="n">pbar</span><span class="o">.</span><span class="n">update_job_running</span><span class="p">()</span>
+
+    <span class="nd">@plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_succeeded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Cache the job and update the progress bar when a job is succeeded&quot;&quot;&quot;</span>
+        <span class="c1"># now the returncode is 0, however, we need to check if output files</span>
+        <span class="c1"># have been created or not, this makes sure job.cache not fail</span>
+        <span class="k">for</span> <span class="n">outkey</span><span class="p">,</span> <span class="n">outtype</span> <span class="ow">in</span> <span class="n">job</span><span class="o">.</span><span class="n">_output_types</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">outtype</span> <span class="o">==</span> <span class="n">ProcOutputType</span><span class="o">.</span><span class="n">VAR</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="n">outkey</span><span class="p">])</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                <span class="n">job</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">JobStatus</span><span class="o">.</span><span class="n">FAILED</span>
+                <span class="n">proc</span><span class="o">.</span><span class="n">pbar</span><span class="o">.</span><span class="n">update_job_failed</span><span class="p">()</span>
+                <span class="n">stderr</span> <span class="o">=</span> <span class="k">await</span> <span class="n">a_read_text</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">stderr_file</span><span class="p">)</span>
+                <span class="n">stderr</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">stderr</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">Output </span><span class="si">{</span><span class="n">outtype</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">outkey</span><span class="si">!r}</span><span class="s1"> &#39;</span>
+                          <span class="s1">&#39;is not generated.&#39;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">a_write_text</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">stderr_file</span><span class="p">,</span> <span class="n">stderr</span><span class="p">)</span>
+                <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">job</span><span class="o">.</span><span class="n">cache</span><span class="p">()</span>
+            <span class="n">proc</span><span class="o">.</span><span class="n">pbar</span><span class="o">.</span><span class="n">update_job_succeeded</span><span class="p">()</span>
+
+    <span class="nd">@plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_failed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proc</span><span class="p">:</span> <span class="s2">&quot;Proc&quot;</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Update the progress bar when a job is failed&quot;&quot;&quot;</span>
+        <span class="n">proc</span><span class="o">.</span><span class="n">pbar</span><span class="o">.</span><span class="n">update_job_failed</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">JobStatus</span><span class="o">.</span><span class="n">RETRYING</span><span class="p">:</span>
+            <span class="n">job</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;debug&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;Retrying #</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="n">job</span><span class="o">.</span><span class="n">trial_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">proc</span><span class="o">.</span><span class="n">pbar</span><span class="o">.</span><span class="n">update_job_retrying</span><span class="p">()</span>
+
+<span class="n">plugin</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">PipenMainPlugin</span><span class="p">)</span>
+
+<span class="n">xqute_plugin</span> <span class="o">=</span> <span class="n">Simplug</span><span class="p">(</span><span class="s1">&#39;xqute&#39;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">XqutePipenPlugin</span><span class="p">:</span><span id="pipen.plugin.XqutePipenPlugin"></span><a class="mkapi-docs-link" title="pipen.plugin.XqutePipenPlugin" href="../../pipen.plugin/#pipen.plugin.XqutePipenPlugin">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;The plugin for xqute working as proxy for pipen plugin hooks&quot;&quot;&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;xqute.pipen&#39;</span>
+
+    <span class="nd">@xqute_plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">def</span> <span class="nf">on_shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xqute</span><span class="p">:</span> <span class="s2">&quot;Xqute&quot;</span><span class="p">,</span> <span class="n">sig</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">signal</span><span class="o">.</span><span class="n">Signals</span><span class="p">]):</span>
+        <span class="sd">&quot;&quot;&quot;When a process is shutting down&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">plugin</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">on_proc_shutdown</span><span class="p">(</span><span class="n">xqute</span><span class="o">.</span><span class="n">proc</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+
+    <span class="nd">@xqute_plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">Scheduler</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;When a job is initialized&quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="n">plugin</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">on_job_init</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">proc</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+
+    <span class="nd">@xqute_plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_queued</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">Scheduler</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;When a job is queued&quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="n">plugin</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">on_job_queued</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">proc</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+
+    <span class="nd">@xqute_plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_submitting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">Scheduler</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;When a job is being submitted&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">plugin</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">on_job_submitting</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">proc</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+
+    <span class="nd">@xqute_plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_submitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">Scheduler</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;When a job is submitted&quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="n">plugin</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">on_job_submitted</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">proc</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+
+    <span class="nd">@xqute_plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_running</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">Scheduler</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;When a job starts to run&quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="n">plugin</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">on_job_running</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">proc</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+
+    <span class="nd">@xqute_plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_killing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">Scheduler</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;When a job is being killed&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">plugin</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">on_job_killing</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">proc</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+
+    <span class="nd">@xqute_plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_killed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">Scheduler</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;When a job is killed&quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="n">plugin</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">on_job_killed</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">proc</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+
+    <span class="nd">@xqute_plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_succeeded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">Scheduler</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;When a job is succeeded&quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="n">plugin</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">on_job_succeeded</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">proc</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+
+    <span class="nd">@xqute_plugin</span><span class="o">.</span><span class="n">impl</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_job_failed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">:</span> <span class="n">Scheduler</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s2">&quot;Job&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;When a job is failed&quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="n">plugin</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">on_job_failed</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">proc</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+
+
+<span class="n">xqute_plugin</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">XqutePipenPlugin</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>

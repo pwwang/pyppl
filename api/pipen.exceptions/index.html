@@ -1,0 +1,1286 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+    
+    
+      
+        <title>pipen.exceptions - pipen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19190aaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.24b84193.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pipenexceptions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="pipen" class="md-header-nav__button md-logo" aria-label="pipen">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            pipen
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              pipen.exceptions
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="pipen" class="md-nav__button md-logo" aria-label="pipen">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    pipen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../CHANGELOG/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-1">
+      pipen
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="pipen" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        pipen
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen/" class="md-nav__link">
+      pipen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.template/" class="md-nav__link">
+      pipen.template
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.scheduler/" class="md-nav__link">
+      pipen.scheduler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.proc/" class="md-nav__link">
+      pipen.proc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.plugin/" class="md-nav__link">
+      pipen.plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.defaults/" class="md-nav__link">
+      pipen.defaults
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.cli/" class="md-nav__link">
+      pipen.cli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.pipen/" class="md-nav__link">
+      pipen.pipen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.progressbar/" class="md-nav__link">
+      pipen.progressbar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.utils/" class="md-nav__link">
+      pipen.utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        pipen.exceptions
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      pipen.exceptions
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipenexceptions" class="md-nav__link">
+    exceptions
+  </a>
+  
+    <nav class="md-nav" aria-label="exceptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionspipenexception" class="md-nav__link">
+    PipenException
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocinputtypeerror" class="md-nav__link">
+    ProcInputTypeError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocscriptfilenotfound" class="md-nav__link">
+    ProcScriptFileNotFound
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocoutputnameerror" class="md-nav__link">
+    ProcOutputNameError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocoutputtypeerror" class="md-nav__link">
+    ProcOutputTypeError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocoutputvalueerror" class="md-nav__link">
+    ProcOutputValueError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocdependencyerror" class="md-nav__link">
+    ProcDependencyError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsnosuchschedulererror" class="md-nav__link">
+    NoSuchSchedulerError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionswrongschedulertypeerror" class="md-nav__link">
+    WrongSchedulerTypeError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsnosuchtemplateengineerror" class="md-nav__link">
+    NoSuchTemplateEngineError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionswrongtemplateengintypeerror" class="md-nav__link">
+    WrongTemplateEnginTypeError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsconfigurationerror" class="md-nav__link">
+    ConfigurationError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocworkdirconflictexception" class="md-nav__link">
+    ProcWorkdirConflictException
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.job/" class="md-nav__link">
+      pipen.job
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      pipen.channel
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="pipen.channel" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        pipen.channel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.channel/" class="md-nav__link">
+      pipen.channel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.channel.vector/" class="md-nav__link">
+      pipen.channel.vector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.channel.verbs/" class="md-nav__link">
+      pipen.channel.verbs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipenexceptions" class="md-nav__link">
+    exceptions
+  </a>
+  
+    <nav class="md-nav" aria-label="exceptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionspipenexception" class="md-nav__link">
+    PipenException
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocinputtypeerror" class="md-nav__link">
+    ProcInputTypeError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocscriptfilenotfound" class="md-nav__link">
+    ProcScriptFileNotFound
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocoutputnameerror" class="md-nav__link">
+    ProcOutputNameError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocoutputtypeerror" class="md-nav__link">
+    ProcOutputTypeError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocoutputvalueerror" class="md-nav__link">
+    ProcOutputValueError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocdependencyerror" class="md-nav__link">
+    ProcDependencyError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsnosuchschedulererror" class="md-nav__link">
+    NoSuchSchedulerError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionswrongschedulertypeerror" class="md-nav__link">
+    WrongSchedulerTypeError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsnosuchtemplateengineerror" class="md-nav__link">
+    NoSuchTemplateEngineError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionswrongtemplateengintypeerror" class="md-nav__link">
+    WrongTemplateEnginTypeError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsconfigurationerror" class="md-nav__link">
+    ConfigurationError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenexceptionsprocworkdirconflictexception" class="md-nav__link">
+    ProcWorkdirConflictException
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>pipen.exceptions</h1>
+                
+                <div class="mkapi-node" id="pipen.exceptions">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h2 id="pipenexceptions" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="../pipen/#pipen">pipen</a>.</span><span class="mkapi-object-name">exceptions</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions" title="Source for pipen.exceptions">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Provide exception classes</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.PipenException">PipenException</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Base exception class for pipen<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.PipenException" title="Source for pipen.exceptions.PipenException">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.ProcInputTypeError">ProcInputTypeError</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When an unsupported input type is provided<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcInputTypeError" title="Source for pipen.exceptions.ProcInputTypeError">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.ProcScriptFileNotFound">ProcScriptFileNotFound</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When script file specified as 'file://' cannot be found<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcScriptFileNotFound" title="Source for pipen.exceptions.ProcScriptFileNotFound">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.ProcOutputNameError">ProcOutputNameError</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When no name or malformatted output is provided<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcOutputNameError" title="Source for pipen.exceptions.ProcOutputNameError">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.ProcOutputTypeError">ProcOutputTypeError</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When an unsupported output type is provided<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcOutputTypeError" title="Source for pipen.exceptions.ProcOutputTypeError">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.ProcOutputValueError">ProcOutputValueError</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When a malformatted output value is provided<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcOutputValueError" title="Source for pipen.exceptions.ProcOutputValueError">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.ProcDependencyError">ProcDependencyError</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When there is something wrong the process dependencies<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcDependencyError" title="Source for pipen.exceptions.ProcDependencyError">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.NoSuchSchedulerError">NoSuchSchedulerError</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When specified scheduler cannot be found<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.NoSuchSchedulerError" title="Source for pipen.exceptions.NoSuchSchedulerError">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.WrongSchedulerTypeError">WrongSchedulerTypeError</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When specified scheduler is not a subclass of Scheduler<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.WrongSchedulerTypeError" title="Source for pipen.exceptions.WrongSchedulerTypeError">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.NoSuchTemplateEngineError">NoSuchTemplateEngineError</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When specified template engine cannot be found<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.NoSuchTemplateEngineError" title="Source for pipen.exceptions.NoSuchTemplateEngineError">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.WrongTemplateEnginTypeError">WrongTemplateEnginTypeError</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When specified tempalte engine is not a subclass of Scheduler<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.WrongTemplateEnginTypeError" title="Source for pipen.exceptions.WrongTemplateEnginTypeError">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.ConfigurationError">ConfigurationError</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">When something wrong set as configuration<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ConfigurationError" title="Source for pipen.exceptions.ConfigurationError">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.exceptions.ProcWorkdirConflictException">ProcWorkdirConflictException</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">"When more than one processes are sharing the same workdir<a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcWorkdirConflictException" title="Source for pipen.exceptions.ProcWorkdirConflictException">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.PipenException">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionspipenexception" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">PipenException</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.PipenException" title="Source for pipen.exceptions.PipenException">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Base exception class for pipen</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.ProcInputTypeError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionsprocinputtypeerror" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">ProcInputTypeError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcInputTypeError" title="Source for pipen.exceptions.ProcInputTypeError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">TypeError</span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When an unsupported input type is provided</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.ProcScriptFileNotFound">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionsprocscriptfilenotfound" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">ProcScriptFileNotFound</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcScriptFileNotFound" title="Source for pipen.exceptions.ProcScriptFileNotFound">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">FileNotFoundError</span>
+
+<span class="mkapi-base">OSError</span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When script file specified as 'file://' cannot be found</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.ProcOutputNameError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionsprocoutputnameerror" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">ProcOutputNameError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcOutputNameError" title="Source for pipen.exceptions.ProcOutputNameError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">NameError</span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When no name or malformatted output is provided</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.ProcOutputTypeError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionsprocoutputtypeerror" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">ProcOutputTypeError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcOutputTypeError" title="Source for pipen.exceptions.ProcOutputTypeError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">TypeError</span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When an unsupported output type is provided</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.ProcOutputValueError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionsprocoutputvalueerror" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">ProcOutputValueError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcOutputValueError" title="Source for pipen.exceptions.ProcOutputValueError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">ValueError</span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When a malformatted output value is provided</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.ProcDependencyError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionsprocdependencyerror" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">ProcDependencyError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcDependencyError" title="Source for pipen.exceptions.ProcDependencyError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When there is something wrong the process dependencies</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.NoSuchSchedulerError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionsnosuchschedulererror" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">NoSuchSchedulerError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.NoSuchSchedulerError" title="Source for pipen.exceptions.NoSuchSchedulerError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When specified scheduler cannot be found</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.WrongSchedulerTypeError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionswrongschedulertypeerror" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">WrongSchedulerTypeError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.WrongSchedulerTypeError" title="Source for pipen.exceptions.WrongSchedulerTypeError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">TypeError</span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When specified scheduler is not a subclass of Scheduler</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.NoSuchTemplateEngineError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionsnosuchtemplateengineerror" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">NoSuchTemplateEngineError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.NoSuchTemplateEngineError" title="Source for pipen.exceptions.NoSuchTemplateEngineError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When specified template engine cannot be found</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.WrongTemplateEnginTypeError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionswrongtemplateengintypeerror" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">WrongTemplateEnginTypeError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.WrongTemplateEnginTypeError" title="Source for pipen.exceptions.WrongTemplateEnginTypeError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">TypeError</span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When specified tempalte engine is not a subclass of Scheduler</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.ConfigurationError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionsconfigurationerror" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">ConfigurationError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ConfigurationError" title="Source for pipen.exceptions.ConfigurationError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>When something wrong set as configuration</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.exceptions.ProcWorkdirConflictException">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenexceptionsprocworkdirconflictexception" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.exceptions">pipen.exceptions</a>.</code><code class="mkapi-object-name">ProcWorkdirConflictException</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.exceptions/#pipen.exceptions.ProcWorkdirConflictException" title="Source for pipen.exceptions.ProcWorkdirConflictException">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base"><a href="./#pipen.exceptions.PipenException">pipen.exceptions.PipenException</a></span>
+
+<span class="mkapi-base">Exception</span>
+
+<span class="mkapi-base">BaseException</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>"When more than one processes are sharing the same workdir</p></div>
+    </div>
+  </div>
+
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../pipen.utils/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                pipen.utils
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../pipen.job/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                pipen.job
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>

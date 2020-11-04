@@ -1,0 +1,1191 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+    
+    
+      
+        <title>pipen.utils - pipen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19190aaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.24b84193.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pipenutils" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="pipen" class="md-header-nav__button md-logo" aria-label="pipen">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            pipen
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              pipen.utils
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="pipen" class="md-nav__button md-logo" aria-label="pipen">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    pipen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../CHANGELOG/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-1">
+      pipen
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="pipen" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        pipen
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen/" class="md-nav__link">
+      pipen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.template/" class="md-nav__link">
+      pipen.template
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.scheduler/" class="md-nav__link">
+      pipen.scheduler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.proc/" class="md-nav__link">
+      pipen.proc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.plugin/" class="md-nav__link">
+      pipen.plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.defaults/" class="md-nav__link">
+      pipen.defaults
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.cli/" class="md-nav__link">
+      pipen.cli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.pipen/" class="md-nav__link">
+      pipen.pipen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.progressbar/" class="md-nav__link">
+      pipen.progressbar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        pipen.utils
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      pipen.utils
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipenutils" class="md-nav__link">
+    utils
+  </a>
+  
+    <nav class="md-nav" aria-label="utils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_logger" class="md-nav__link">
+    get_logger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_console_width" class="md-nav__link">
+    get_console_width
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_plugin_context" class="md-nav__link">
+    get_plugin_context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilslog_rich_renderable" class="md-nav__link">
+    log_rich_renderable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsrender_scope" class="md-nav__link">
+    render_scope
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilspipen_banner" class="md-nav__link">
+    pipen_banner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsbrief_list" class="md-nav__link">
+    brief_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_mtime" class="md-nav__link">
+    get_mtime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsis_subclass" class="md-nav__link">
+    is_subclass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsload_entrypoints" class="md-nav__link">
+    load_entrypoints
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.exceptions/" class="md-nav__link">
+      pipen.exceptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.job/" class="md-nav__link">
+      pipen.job
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      pipen.channel
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="pipen.channel" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        pipen.channel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.channel/" class="md-nav__link">
+      pipen.channel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.channel.vector/" class="md-nav__link">
+      pipen.channel.vector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pipen.channel.verbs/" class="md-nav__link">
+      pipen.channel.verbs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipenutils" class="md-nav__link">
+    utils
+  </a>
+  
+    <nav class="md-nav" aria-label="utils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_logger" class="md-nav__link">
+    get_logger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_console_width" class="md-nav__link">
+    get_console_width
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_plugin_context" class="md-nav__link">
+    get_plugin_context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilslog_rich_renderable" class="md-nav__link">
+    log_rich_renderable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsrender_scope" class="md-nav__link">
+    render_scope
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilspipen_banner" class="md-nav__link">
+    pipen_banner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsbrief_list" class="md-nav__link">
+    brief_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_mtime" class="md-nav__link">
+    get_mtime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsis_subclass" class="md-nav__link">
+    is_subclass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsload_entrypoints" class="md-nav__link">
+    load_entrypoints
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>pipen.utils</h1>
+                
+                <div class="mkapi-node" id="pipen.utils">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h2 id="pipenutils" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="../pipen/#pipen">pipen</a>.</span><span class="mkapi-object-name">utils</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils" title="Source for pipen.utils">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Provide some utilities</p></div>
+    </div>
+  <div class="mkapi-section functions">
+      <div class="mkapi-section-name functions">
+          <span class="mkapi-section-name-body functions">Functions</span> 
+        </div>
+      <div class="mkapi-section-body functions"><ul class="mkapi-items">
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.brief_list">brief_list</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">blist</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Briefly show an integer list, combine the continuous numbers.<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.brief_list" title="Source for pipen.utils.brief_list">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.get_console_width">get_console_width</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">default</code>, <code class="mkapi-object-signature">shift</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(int)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the console width<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_console_width" title="Source for pipen.utils.get_console_width">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.get_logger">get_logger</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">level</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Logger)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the logger by given plugin name<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_logger" title="Source for pipen.utils.get_logger">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.get_mtime">get_mtime</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">path</code>, <code class="mkapi-object-signature">dir_depth</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(float)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the modification time of a path.<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_mtime" title="Source for pipen.utils.get_mtime">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.get_plugin_context">get_plugin_context</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">plugins</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(SimplugContext)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the plugin context to enable and disable plugins per pipeline<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_plugin_context" title="Source for pipen.utils.get_plugin_context">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.is_subclass">is_subclass</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code>, <code class="mkapi-object-signature">cls</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(bool)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Tell if obj is a subclass of cls<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.is_subclass" title="Source for pipen.utils.is_subclass">&lt;/&gt;</a></span></li>
+
+<li class="generator"><code class="mkapi-item-name"><a href="#pipen.utils.load_entrypoints">load_entrypoints</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">group</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(iterable of (str, any))</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Load objects from setuptools entrypoints by given group name<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.load_entrypoints" title="Source for pipen.utils.load_entrypoints">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.log_rich_renderable">log_rich_renderable</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">renderable</code>, <code class="mkapi-object-signature">color</code>, <code class="mkapi-object-signature">logfunc</code>, <code class="mkapi-object-signature">*args</code>, <code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Log a rich renderable to logger<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.log_rich_renderable" title="Source for pipen.utils.log_rich_renderable">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.pipen_banner">pipen_banner</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(ConsoleRenderable, RichCast, or str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The banner for pipen<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.pipen_banner" title="Source for pipen.utils.pipen_banner">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.render_scope">render_scope</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">scope</code>, <code class="mkapi-object-signature">title</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(ConsoleRenderable, RichCast, or str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Log a mapping to console<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.render_scope" title="Source for pipen.utils.render_scope">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.get_logger">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsget_logger" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">get_logger</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">level=None</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_logger" title="Source for pipen.utils.get_logger">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the logger by given plugin name</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+
+<li><code class="mkapi-item-name">level</code>
+<span class="mkapi-item-type">(str, int, or NoneType, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The initial level of the logger</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Logger)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The logger</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.get_console_width">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsget_console_width" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">get_console_width</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">default=80</code>, <code class="mkapi-object-signature">shift=26</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; int</span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_console_width" title="Source for pipen.utils.get_console_width">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the console width</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">default</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The default console width if failed to get</span></li>
+
+<li><code class="mkapi-item-name">shift</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The shift to subtract from the width
+as we have time, level, plugin name in log</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.get_plugin_context">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsget_plugin_context" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">get_plugin_context</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">plugins</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_plugin_context" title="Source for pipen.utils.get_plugin_context">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the plugin context to enable and disable plugins per pipeline</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">plugins</code>
+<span class="mkapi-item-type">(list of any, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A list of plugins to enable or a list of names with 'no:'
+as prefix to disable</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(SimplugContext)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The plugin context manager</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.log_rich_renderable">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilslog_rich_renderable" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">log_rich_renderable</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">renderable</code>, <code class="mkapi-object-signature">color</code>, <code class="mkapi-object-signature">logfunc</code>, <code class="mkapi-object-signature">*args</code>, <code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.log_rich_renderable" title="Source for pipen.utils.log_rich_renderable">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Log a rich renderable to logger</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">renderable</code>
+<span class="mkapi-item-type">(ConsoleRenderable, RichCast, or str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The rich renderable</span></li>
+
+
+<li><code class="mkapi-item-name">logfunc</code>
+<span class="mkapi-item-type">(callable)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The log function, if message is not the first argument,
+use functools.partial to wrap it</span></li>
+
+<li><code class="mkapi-item-name">*args</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The arguments to the log function</span></li>
+
+<li><code class="mkapi-item-name">**kwargs</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The keyword arguments to the log function</span></li>
+
+<li><code class="mkapi-item-name">splitline</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Whether split the lines or log the entire message</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.render_scope">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsrender_scope" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">render_scope</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">scope</code>, <code class="mkapi-object-signature">title</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; ConsoleRenderable, RichCast, or str</span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.render_scope" title="Source for pipen.utils.render_scope">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Log a mapping to console</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">scope</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The mapping object</span></li>
+
+<li><code class="mkapi-item-name">title</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The title of the scope</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.pipen_banner">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilspipen_banner" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">pipen_banner</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; ConsoleRenderable, RichCast, or str</span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.pipen_banner" title="Source for pipen.utils.pipen_banner">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The banner for pipen</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.brief_list">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsbrief_list" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">brief_list</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">blist</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.brief_list" title="Source for pipen.utils.brief_list">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Briefly show an integer list, combine the continuous numbers.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">blist</code>
+<span class="mkapi-item-type">(list of int)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The list</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(str)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The string to show for the briefed list.</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.get_mtime">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsget_mtime" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">get_mtime</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">path</code>, <code class="mkapi-object-signature">dir_depth=1</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_mtime" title="Source for pipen.utils.get_mtime">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the modification time of a path.</p>
+<p>If path is a directory, try to get the last modification time of the
+contents in the directory at given dir_depth</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+
+<li><code class="mkapi-item-name">dir_depth</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The depth of the directory to check the
+last modification time</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(float)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The last modification time of path</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.is_subclass">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsis_subclass" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">is_subclass</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code>, <code class="mkapi-object-signature">cls</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.is_subclass" title="Source for pipen.utils.is_subclass">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tell if obj is a subclass of cls</p>
+<p>Differences with issubclass is that we don't raise Type error if obj
+is not a class</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">obj</code>
+<span class="mkapi-item-type">(any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The object to check</span></li>
+
+<li><code class="mkapi-item-name">cls</code>
+<span class="mkapi-item-type">(type)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The class to check</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(bool)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>True if obj is a subclass of cls otherwise False</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.load_entrypoints">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object generator code top">
+    <div class="mkapi-object-kind generator top">generator</div>
+    <h3 id="pipenutilsload_entrypoints" class="mkapi-object-body generator top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">load_entrypoints</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">group</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.load_entrypoints" title="Source for pipen.utils.load_entrypoints">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Load objects from setuptools entrypoints by given group name</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">group</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The group name of the entrypoints</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(iterable of (str, any))</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>An iterable of tuples with name and the loaded object</p></div>
+    </div>
+  </div>
+
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../pipen.progressbar/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                pipen.progressbar
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../pipen.exceptions/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                pipen.exceptions
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>

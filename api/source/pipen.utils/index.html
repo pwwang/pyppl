@@ -1,0 +1,789 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+    
+    
+      
+        <title>pipen.utils - pipen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.19190aaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.24b84193.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pipenutils" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="pipen" class="md-header-nav__button md-logo" aria-label="pipen">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            pipen
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              pipen.utils
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="pipen" class="md-nav__button md-logo" aria-label="pipen">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    pipen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../CHANGELOG/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      pipen
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="pipen" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        pipen
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen/" class="md-nav__link">
+      pipen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.template/" class="md-nav__link">
+      pipen.template
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.scheduler/" class="md-nav__link">
+      pipen.scheduler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.proc/" class="md-nav__link">
+      pipen.proc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.plugin/" class="md-nav__link">
+      pipen.plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.defaults/" class="md-nav__link">
+      pipen.defaults
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.cli/" class="md-nav__link">
+      pipen.cli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.pipen/" class="md-nav__link">
+      pipen.pipen
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.progressbar/" class="md-nav__link">
+      pipen.progressbar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.utils/" class="md-nav__link">
+      pipen.utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.exceptions/" class="md-nav__link">
+      pipen.exceptions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.job/" class="md-nav__link">
+      pipen.job
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      pipen.channel
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="pipen.channel" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        pipen.channel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.channel/" class="md-nav__link">
+      pipen.channel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.channel.vector/" class="md-nav__link">
+      pipen.channel.vector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pipen.channel.verbs/" class="md-nav__link">
+      pipen.channel.verbs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">pipen.</span><span class="mkapi-object-name">utils</span>
+<span id="pipen.utils"></span><a class="mkapi-docs-link" href="../../pipen.utils">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Provide some utilities&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">PathLike</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
+<span class="p">)</span>
+<span class="c1"># pylint: disable=unused-import</span>
+<span class="k">try</span><span class="p">:</span> <span class="c1"># pragma: no cover</span>
+    <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">cached_property</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span> <span class="c1"># pragma: no cover</span>
+    <span class="kn">from</span> <span class="nn">cached_property</span> <span class="kn">import</span> <span class="n">cached_property</span>
+<span class="c1"># pylint: enable=unused-import</span>
+
+<span class="k">try</span><span class="p">:</span> <span class="c1"># pragma: no cover</span>
+    <span class="kn">import</span> <span class="nn">importlib_metadata</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span> <span class="c1"># pragma: no cover</span>
+    <span class="c1"># pylint: disable=ungrouped-imports</span>
+    <span class="kn">from</span> <span class="nn">importlib</span> <span class="kn">import</span> <span class="n">metadata</span> <span class="k">as</span> <span class="n">importlib_metadata</span>
+
+<span class="kn">from</span> <span class="nn">rich.logging</span> <span class="kn">import</span> <span class="n">RichHandler</span>
+<span class="kn">from</span> <span class="nn">rich.console</span> <span class="kn">import</span> <span class="n">Console</span><span class="p">,</span> <span class="n">RenderableType</span>
+<span class="kn">from</span> <span class="nn">rich.highlighter</span> <span class="kn">import</span> <span class="n">ReprHighlighter</span>
+<span class="kn">from</span> <span class="nn">rich.table</span> <span class="kn">import</span> <span class="n">Table</span>
+<span class="kn">from</span> <span class="nn">rich.text</span> <span class="kn">import</span> <span class="n">Text</span>
+<span class="kn">from</span> <span class="nn">rich.panel</span> <span class="kn">import</span> <span class="n">Panel</span>
+<span class="kn">from</span> <span class="nn">rich.pretty</span> <span class="kn">import</span> <span class="n">Pretty</span>
+
+
+<span class="kn">from</span> <span class="nn">more_itertools</span> <span class="kn">import</span> <span class="n">consecutive_groups</span>
+<span class="kn">from</span> <span class="nn">simplug</span> <span class="kn">import</span> <span class="n">SimplugContext</span>
+
+<span class="kn">from</span> <span class="nn">.defaults</span> <span class="kn">import</span> <span class="p">(</span><span class="n">LOGGER_NAME</span><span class="p">,</span>
+                       <span class="n">DEFAULT_CONSOLE_WIDTH</span><span class="p">,</span>
+                       <span class="n">DEFAULT_CONSOLE_WIDTH_SHIFT</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.exceptions</span> <span class="kn">import</span> <span class="n">ConfigurationError</span>
+<span class="kn">from</span> <span class="nn">.plugin</span> <span class="kn">import</span> <span class="n">plugin</span>
+
+<span class="c1"># pylint: disable=invalid-name</span>
+
+<span class="n">_logger_handler</span> <span class="o">=</span> <span class="n">RichHandler</span><span class="p">(</span><span class="n">show_path</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                              <span class="n">show_level</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                              <span class="n">rich_tracebacks</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                              <span class="n">markup</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">_logger_format</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span>
+    <span class="s1">&#39;[logging.level.</span><span class="si">%(levelname)s</span><span class="s1">]</span><span class="si">%(levelname).1s</span><span class="s1">[/logging.level.</span><span class="si">%(levelname)s</span><span class="s1">]&#39;</span>
+    <span class="s1">&#39; /</span><span class="si">%(plugin_name)-7s</span><span class="s1"> </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span>
+<span class="p">)</span>
+<span class="n">_logger_handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">_logger_format</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span><span id="pipen.utils.get_logger"></span><a class="mkapi-docs-link" title="pipen.utils.get_logger" href="../../pipen.utils/#pipen.utils.get_logger">DOCS</a>
+               <span class="n">level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">logging</span><span class="o">.</span><span class="n">Logger</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Get the logger by given plugin name</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        level: The initial level of the logger</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The logger</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;pipen.</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">_logger_handler</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">level</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">level</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">logging</span><span class="o">.</span><span class="n">LoggerAdapter</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;plugin_name&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">})</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="n">LOGGER_NAME</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_console_width</span><span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">DEFAULT_CONSOLE_WIDTH</span><span class="p">,</span><span id="pipen.utils.get_console_width"></span><a class="mkapi-docs-link" title="pipen.utils.get_console_width" href="../../pipen.utils/#pipen.utils.get_console_width">DOCS</a>
+                      <span class="n">shift</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">DEFAULT_CONSOLE_WIDTH_SHIFT</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Get the console width</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        default: The default console width if failed to get</span>
+<span class="sd">        shift: The shift to subtract from the width</span>
+<span class="sd">            as we have time, level, plugin name in log</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">logger</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">handlers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">console</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="n">shift</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">IndexError</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="k">return</span> <span class="n">default</span> <span class="o">-</span> <span class="n">shift</span>
+
+<span class="k">def</span> <span class="nf">get_plugin_context</span><span class="p">(</span><span class="n">plugins</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">SimplugContext</span><span class="p">:</span><span id="pipen.utils.get_plugin_context"></span><a class="mkapi-docs-link" title="pipen.utils.get_plugin_context" href="../../pipen.utils/#pipen.utils.get_plugin_context">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Get the plugin context to enable and disable plugins per pipeline</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        plugins: A list of plugins to enable or a list of names with &#39;no:&#39;</span>
+<span class="sd">            as prefix to disable</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The plugin context manager</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">plugins</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">plugin</span><span class="o">.</span><span class="n">plugins_only_context</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="n">no_plugins</span> <span class="o">=</span> <span class="p">[</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">plug</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">plug</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;no:&#39;</span><span class="p">)</span>
+                  <span class="k">for</span> <span class="n">plug</span> <span class="ow">in</span> <span class="n">plugins</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">no_plugins</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">no_plugins</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="n">ConfigurationError</span><span class="p">(</span>
+            <span class="s1">&#39;Either all plugin names start with &quot;no:&quot; or &#39;</span>
+            <span class="s1">&#39;none of them does.&#39;</span>
+        <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">no_plugins</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">plugin</span><span class="o">.</span><span class="n">plugins_but_context</span><span class="p">(</span>
+            <span class="n">plug</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="k">for</span> <span class="n">plug</span> <span class="ow">in</span> <span class="n">plugins</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">plugin</span><span class="o">.</span><span class="n">plugins_only_context</span><span class="p">(</span><span class="n">plugins</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">log_rich_renderable</span><span class="p">(</span><span id="pipen.utils.log_rich_renderable"></span><a class="mkapi-docs-link" title="pipen.utils.log_rich_renderable" href="../../pipen.utils/#pipen.utils.log_rich_renderable">DOCS</a>
+        <span class="n">renderable</span><span class="p">:</span> <span class="n">RenderableType</span><span class="p">,</span>
+        <span class="n">color</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">logfunc</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
+        <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Log a rich renderable to logger</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        renderable: The rich renderable</span>
+<span class="sd">        splitline: Whether split the lines or log the entire message</span>
+<span class="sd">        logfunc: The log function, if message is not the first argument,</span>
+<span class="sd">            use functools.partial to wrap it</span>
+<span class="sd">        *args: The arguments to the log function</span>
+<span class="sd">        **kwargs: The keyword arguments to the log function</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">console</span> <span class="o">=</span> <span class="n">Console</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">renderable</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">console</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+        <span class="n">logfunc</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s1">]</span><span class="si">{</span><span class="n">line</span><span class="si">}</span><span class="s1">[/</span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s1">]&#39;</span> <span class="k">if</span> <span class="n">color</span> <span class="k">else</span> <span class="n">line</span><span class="p">,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">render_scope</span><span class="p">(</span><span class="n">scope</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RenderableType</span><span class="p">:</span><span id="pipen.utils.render_scope"></span><a class="mkapi-docs-link" title="pipen.utils.render_scope" href="../../pipen.utils/#pipen.utils.render_scope">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Log a mapping to console</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        scope: The mapping object</span>
+<span class="sd">        title: The title of the scope</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">highlighter</span> <span class="o">=</span> <span class="n">ReprHighlighter</span><span class="p">()</span>
+    <span class="n">items_table</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">padding</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">expand</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">items_table</span><span class="o">.</span><span class="n">add_column</span><span class="p">(</span><span class="n">justify</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">scope</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">items_table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span>
+            <span class="n">Text</span><span class="o">.</span><span class="n">assemble</span><span class="p">((</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;scope.key&quot;</span><span class="p">)),</span>
+            <span class="n">Text</span><span class="o">.</span><span class="n">assemble</span><span class="p">((</span><span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;scope.equals&#39;</span><span class="p">)),</span>
+            <span class="n">Pretty</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">highlighter</span><span class="o">=</span><span class="n">highlighter</span><span class="p">,</span> <span class="n">overflow</span><span class="o">=</span><span class="s1">&#39;fold&#39;</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Panel</span><span class="p">(</span>
+        <span class="n">items_table</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+        <span class="n">width</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">DEFAULT_CONSOLE_WIDTH</span><span class="p">,</span> <span class="n">get_console_width</span><span class="p">()),</span>
+        <span class="n">border_style</span><span class="o">=</span><span class="s2">&quot;scope.border&quot;</span><span class="p">,</span>
+        <span class="n">padding</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">pipen_banner</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">RenderableType</span><span class="p">:</span><span id="pipen.utils.pipen_banner"></span><a class="mkapi-docs-link" title="pipen.utils.pipen_banner" href="../../pipen.utils/#pipen.utils.pipen_banner">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;The banner for pipen&quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">__version__</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">DEFAULT_CONSOLE_WIDTH</span><span class="p">,</span> <span class="n">get_console_width</span><span class="p">()),</span>
+                  <span class="n">show_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">show_edge</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">show_footer</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">show_lines</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">caption</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;version: </span><span class="si">{</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">add_column</span><span class="p">(</span><span class="n">justify</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;  _____________________________________   __&quot;</span><span class="p">)</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;  ___  __ \___  _/__  __ \__  ____/__  | / /&quot;</span><span class="p">)</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot; __  /_/ /__  / __  /_/ /_  __/  __   |/ / &quot;</span><span class="p">)</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;_  ____/__/ /  _  ____/_  /___  _  /|  /  &quot;</span><span class="p">)</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/_/     /___/  /_/     /_____/  /_/ |_/   &quot;</span><span class="p">)</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">table</span>
+
+<span class="k">def</span> <span class="nf">brief_list</span><span class="p">(</span><span class="n">blist</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span><span id="pipen.utils.brief_list"></span><a class="mkapi-docs-link" title="pipen.utils.brief_list" href="../../pipen.utils/#pipen.utils.brief_list">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Briefly show an integer list, combine the continuous numbers.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        blist: The list</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The string to show for the briefed list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">consecutive_groups</span><span class="p">(</span><span class="n">blist</span><span class="p">):</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">group</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">group</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">group</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_mtime</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">PathLike</span><span class="p">,</span> <span class="n">dir_depth</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span><span id="pipen.utils.get_mtime"></span><a class="mkapi-docs-link" title="pipen.utils.get_mtime" href="../../pipen.utils/#pipen.utils.get_mtime">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Get the modification time of a path.</span>
+
+<span class="sd">    If path is a directory, try to get the last modification time of the</span>
+<span class="sd">    contents in the directory at given dir_depth</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dir_depth: The depth of the directory to check the</span>
+<span class="sd">            last modification time</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The last modification time of path</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span> <span class="ow">or</span> <span class="n">dir_depth</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_mtime</span>
+
+    <span class="n">mtime</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">path</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">):</span>
+        <span class="n">mtime</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">mtime</span><span class="p">,</span> <span class="n">get_mtime</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">dir_depth</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">mtime</span>
+
+<span class="k">def</span> <span class="nf">is_subclass</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="bp">cls</span><span class="p">:</span> <span class="nb">type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span><span id="pipen.utils.is_subclass"></span><a class="mkapi-docs-link" title="pipen.utils.is_subclass" href="../../pipen.utils/#pipen.utils.is_subclass">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Tell if obj is a subclass of cls</span>
+
+<span class="sd">    Differences with issubclass is that we don&#39;t raise Type error if obj</span>
+<span class="sd">    is not a class</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        obj: The object to check</span>
+<span class="sd">        cls: The class to check</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        True if obj is a subclass of cls otherwise False</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">load_entrypoints</span><span class="p">(</span><span class="n">group</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span><span id="pipen.utils.load_entrypoints"></span><a class="mkapi-docs-link" title="pipen.utils.load_entrypoints" href="../../pipen.utils/#pipen.utils.load_entrypoints">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Load objects from setuptools entrypoints by given group name</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        group: The group name of the entrypoints</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        An iterable of tuples with name and the loaded object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">dist</span> <span class="ow">in</span> <span class="n">importlib_metadata</span><span class="o">.</span><span class="n">distributions</span><span class="p">():</span> <span class="c1"># pragma: no cover</span>
+        <span class="k">for</span> <span class="n">epoint</span> <span class="ow">in</span> <span class="n">dist</span><span class="o">.</span><span class="n">entry_points</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">epoint</span><span class="o">.</span><span class="n">group</span> <span class="o">!=</span> <span class="n">group</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">epoint</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+            <span class="k">yield</span> <span class="p">(</span><span class="n">epoint</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>
